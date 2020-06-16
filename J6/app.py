@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template, jsonify
+from werkzeug.utils import secure_filename
 import os
 
 BASE_DIR = os.path.dirname(__file__)
@@ -52,7 +53,7 @@ def uploading_file():
     if request.method == 'POST':
         f = request.files['uploadedData']
         uploading_dir = os.path.join(BASE_DIR, 'upload')
-        f.save(uploading_dir + f'/{f.filename}')
+        f.save(uploading_dir + f'/{secure_filename(f.filename)}')
         return 'filet be khubi va khoshi upload shod boro be zendegit beres'
     
     films_list = ['shawsheng redem', 'interstellar', 'inception', 'seven', 'seperation', 'predestination', 'leon']
