@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>kelas online</title>
+</head>
+<body>
+    <h1>Claculator</h1>
+    <form action="/calculator" method="POST">
+        <label for="num1">number1</label>
+        <input type="text" name="num1"><br>
+        <label for="num2">number2</label>
+        <input type="text" name="num2"><br>
+        <label for="operation">operatin</label>
+        <input type="text" name="operation" placeholder="+ - *">
+        <input type="submit" value="submit">
+    </form>
+    <br><br>
+    {% if result %}
+        <h1>result {{result}}</h1>
+    {% endif %}
+</body>
+</html>

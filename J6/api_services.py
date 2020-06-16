@@ -1,0 +1,3 @@
+#### restful api ===> get, post, put, delete, ... 
+
+### CRUD   ---->  Create(post) Read(get) Update(put, patch)  Delete(delete)

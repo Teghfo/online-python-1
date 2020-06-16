@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+    <title>{% block title %}{% endblock %} - panel uploading</title>
+</head>
+<body>
+    <h1>Mapsa Uploading</h1>
+    <header>
+        {% block header %}{% endblock %}
+    </header>
+    {% for film in films_list %}
+        <div class="films"> {{film}} </div>
+    {% endfor %}
+    {% block content %}{% endblock %}
+</body>
+</html>
