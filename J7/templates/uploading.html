@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Uploading Page{% endblock %}
+
+
+{% block header %}
+    <h1> Uploading Page </h1>
+{% endblock %}
+
+{% block content %}
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        Select your File to Upoad:
+        <input type="file" name="uploadedData">
+        <input type="submit" value="upload">
+    </form>
+{% endblock %}
